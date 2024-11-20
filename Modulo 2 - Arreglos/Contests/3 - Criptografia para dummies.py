@@ -9,6 +9,8 @@ for _ in range(c):
     b = case[1::2]
     for i in range(len(case)//2):
         result = result + tuple(b[i]) + tuple(a[i])
+    if len(case) % 2 != 0:
+        result = result + tuple(a[len(case)//2])
     result = "".join(result)
     print(result)
 
